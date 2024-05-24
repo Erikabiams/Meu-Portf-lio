@@ -1,0 +1,496 @@
+/* Estilização geral */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: #000;
+    height: 100vh;
+    color: #ffd4de;
+}
+
+
+.interface{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+h2.titulo{
+    color: #FF577F;
+    font-size: 30px;
+    text-align: center;
+}
+
+span{
+    color: #a7032a;
+    }
+
+
+
+/* ESTILO DO CABEÇALHO */
+
+#header {
+    box-sizing: border-box;
+    height: 80px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000;
+}
+
+
+#menu{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+/* cabeçalho desktop */
+
+ a.active{
+    color: #FF577F;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+nav a.active2.active3:hover,
+nav a.active{
+    color: #ff2155;
+    border-bottom: 3px solid #ff2155;
+    transform: scale(1.02);
+    font-size: 20px;
+}
+
+
+
+a.active2{
+    color: #FF577F;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.2s ease;
+    cursor: pointer;
+
+}
+
+
+a.active2:hover{
+    color: #ff2155;
+    transform: scale(1.02);
+}
+
+
+
+ a.active3{
+    color: #FF577F;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+a.active3:hover{
+    color: #ff2155;
+    transform: scale(1.02);
+}
+
+ a.contact{
+    color: #FF577F;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.2s ease;
+    cursor: pointer
+}
+
+a.contact:hover{
+    color: #ff2155;
+    transform: scale(1.02);
+}
+
+
+/* ESTILIZAÇÃO MENU MOBILE */
+#btn-mobile{
+    display: none;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 720px){ 
+#btn-mobile{
+    display:block
+}
+ #menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 70px;
+    right: 0px;
+    background: #000;
+    transition: .6s; 
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+    }
+    #nav.ativo #menu{
+        display:block;
+        height:calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    
+#menu a{
+    padding: .5rem 0;
+    margin: 0 1rem;
+}
+#btn-mobile{
+    display: flex; 
+   padding: .5rem 1rem;
+   font-size: 1rem;
+   font-weight: 600;
+   border: none;
+   background: none;
+   cursor: pointer;
+   gap: .8rem;
+   color: #FF577F;
+
+}
+
+#hamburguer:hover{
+    color:#ff2155;
+
+}
+
+#hamburguer{
+    border-top: 3px solid;
+    width: 20px;
+    color:#FF577F;
+}
+#hamburguer::after, #hamburguer::before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
+}
+
+#nav.ativo #hamburguer{
+    border-top-color: transparent;
+}
+#nav.ativo #hamburguer::before{
+    transform: rotate(135deg);
+}
+
+#nav.ativo #hamburguer::after{
+    top: -7px;
+    transform: rotate(-135deg);
+
+}
+}
+
+/* ///////////////////////////// */
+
+/* estilização do main */
+
+section .flex{
+    padding: 50px;
+    gap: 180px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.img_topo{
+    width: 400px;
+    height: 400px;
+    padding: 4px;
+    margin: 2px;
+}
+
+
+.person_content h1 {
+    -webkit-text-stroke: 0.7px #ffd4de; 
+    background-image: linear-gradient(to right,#f95178, #f472a2, #ffd4de); 
+    font-family: "Lilita One", sans-serif;
+    font-size: 60px;
+    font-weight: 100;
+    font-style: oblique;
+    background-clip: text; 
+    color: transparent; 
+      
+}
+
+.person_content h1{
+    background-image: linear-gradient(to right,#a7032a, #e52e71, #c2526c); 
+    background-clip: text; 
+    color: transparent; 
+    -webkit-text-stroke: 1px #ffd4de; 
+    font-style: italic;
+    font-family: "Lilita One", sans-serif;
+    font-size: 60px;
+    line-height: 50px;
+    animation: text 10s ease forwards infinite;
+    height: 100%;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.person_content div h1:nth-child(2){
+    animation-delay: 5s infinite;
+}
+
+@keyframes text{
+    100%{
+        color:#000
+    }
+}
+
+h1.segundoh1{
+    width: 500px;
+    font-size: 60px;
+}
+
+p.apresentacao{
+    color: #ffd4de;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 18px 0px;
+}
+
+.acesso_redes{
+    font-size: 20px;
+}
+
+.redes_sociais a{
+    color: #ffd4de;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+} 
+
+
+.redes_sociais a:hover{
+    transform: scale(1.05)translateZ(2px);
+}
+
+.redes_sociais button{
+display: inline flex;
+width: 40px;
+height:40px;
+background: #ff2155;
+margin: 0 15px;
+border: none;
+border-radius: 50%;
+justify-content: center;
+margin-top: 20px;
+align-items: center;
+transition: 0.4s;
+font-size: 20px;
+cursor: pointer;
+transition: 0.3s ease-in-out;
+}
+
+
+.redes_sociais button:hover{
+    box-shadow: 0px 0px 10px #ffd4de;
+background: #a7032a;
+    transform: scale(1.05)translateY(-3px);
+}
+
+/* fOOTER */
+
+.img_rodape{
+    width: 70px;
+    height: 30px;
+    margin-top: 10px;
+
+}
+
+.rodape p{
+    margin-top: 10px;
+}
+
+.rodape p span{
+    color: #ff2155;
+}
+.conteudo_rodape{
+    width: 1650;
+    height: 80px;
+    border-top: 3px solid #ff2155;
+    background: transparent;
+    color: #ffd4de;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 90px;
+}
+h1{
+    opacity: 0%;
+    transition: 1s all;
+}
+
+
+
+/* //////////////////////// */
+
+
+/* Estilos para telas maiores que 741px até 1400px */
+@media only screen and (min-width: 1106px) and (max-width: 1400px) {
+
+    main{
+        padding-bottom: 140px;
+    }
+    section.flex {
+        padding-top: 80px;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-right: 10px;
+        margin-left: 30px;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+    .img_topo img {
+        width: 400px;
+        height: 400px;
+        padding: 30px;
+    }
+    .redes h2 {
+        font-size: 18px;
+    }
+    .redes {
+        display: flex;
+        gap: 5px;
+    }
+    .redes_sociais {
+        gap: 5px;
+        display: flex;
+    }
+    .conteudo_rodape {
+        position: static;
+    }
+}
+
+/* Estilos para telas menores ou iguais a 500px */
+@media only screen and (min-width: 530px) and (max-width: 1102px) {
+    .flex {
+        padding: 40px;
+        gap: 40px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .text_topo_site {
+        padding: 30px;
+        margin-top: -90px;
+    }
+    .img_topo img {
+        padding-left: 0px;
+        padding-right: 250px;
+        width: 680px; 
+        height: 500px;
+    }
+    .person_content {
+        font-size: 20px;
+        margin-left: 20px;
+        padding: 5px 10px;
+    }
+    .apresentação p {
+        font-size: 20px;
+        margin: 5px;
+        padding: 5px 10px;
+    }
+    .acesso_redes {
+        font-size: 18px;
+        margin: 5px;
+        margin-top: 20px;
+    }
+    .redes_sociais {
+        margin-top: 20px;
+    }
+    .conteudo_rodape {
+        position: static;
+    }
+}
+
+
+
+@media only  screen and (max-width:529px){
+
+    .flex{
+        padding-bottom: 5px;
+        padding-top: 40px;
+        padding-left: 30px;
+        padding-right: 10px;
+         gap: 40px;
+        display: flex;
+        justify-content: justify;
+        flex-direction: column-reverse;
+   }
+
+   .text_topo_site{
+       margin-left: 100px;
+       padding: 10px;
+       margin-top: -90px;
+   }
+    h1.segundoh1{
+        width: 400px;
+        font-size: 50px;
+        margin-top: 5px;
+    }
+
+   .img_topo{
+       padding: 3px ;
+   } 
+   .img_topo img{
+       width: 400px;
+       height: 400px;
+       padding: 30px;
+   
+   }
+   .person_content{
+    padding-left: 0px;
+  padding-right: 60px;
+       font-size: 30px;
+   }
+   p.apresentacao {
+       font-size: 18px;
+        font-weight: 400;
+        font-size: 18px;
+        margin: 18px 0px;
+        padding-right: 70px;
+   }
+
+   .acesso_redes{
+   font-weight: 400px;
+   font-size: 18px;
+   margin: 5px;
+   margin-top: 10px;
+   }
+
+   .redes_sociais{
+       margin-top: 20px;
+   }
+
+   .conteudo_rodape{
+       position: static
+   }
+} 

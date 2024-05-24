@@ -1,0 +1,355 @@
+/* Estilização geral */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: #000;
+    height: 100vh;
+    color: #ffd4de;
+}
+
+
+.interface{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+/* ESTILO DO CABEÇALHO */
+
+#header {
+    box-sizing: border-box;
+    height: 100px;
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000;
+}
+
+
+#menu{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+/* 
+#menu a{
+    display: block;
+} */
+
+
+/* cabeçalho desktop */
+
+ a.active{
+    color: #FF577F;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+a.active:hover{
+    color: #ff2155;
+    transform: scale(1.02);
+}
+
+
+a.active2{
+    color: #FF577F;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.2s ease;
+    cursor: pointer;
+
+}
+
+
+
+nav a.active.active3:hover,
+nav a.active2{
+    color: #ff2155;
+    border-bottom: 3px solid #ff2155;
+    transform: scale(1.02);
+    font-size: 20px;
+}
+
+
+
+ a.active3{
+    color: #FF577F;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+a.active3:hover{
+    color: #ff2155;
+    transform: scale(1.02);
+}
+
+ a.contact{
+    color: #FF577F;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.2s ease;
+    cursor: pointer
+}
+
+a.contact:hover{
+    color: #ff2155;
+    transform: scale(1.02);
+}
+
+
+/* ESTILIZAÇÃO MENU MOBILE */
+#btn-mobile{
+    display: none;
+}
+
+ @media(max-width:660px){ 
+#btn-mobile{
+    display:block
+}
+ #menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 80px;
+    right: 0px;
+    background: #000;
+    transition: .6s; 
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+    }
+    #nav.ativo #menu{
+        display:block;
+        height:calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    
+#menu a{
+    padding: .5rem 0;
+    margin: 0 1rem;
+}
+#btn-mobile{
+    display: flex; 
+   padding: .5rem 1rem;
+   font-size: 1rem;
+   font-weight: 600;
+   border: none;
+   background: none;
+   cursor: pointer;
+   gap: .8rem;
+   color: #FF577F;
+
+}
+
+#hamburguer:hover{
+    color:#ff2155;
+
+}
+
+#hamburguer{
+    border-top: 3px solid;
+    width: 20px;
+    color:#FF577F;
+}
+#hamburguer::after, #hamburguer::before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
+}
+
+#nav.ativo #hamburguer{
+    border-top-color: transparent;
+}
+#nav.ativo #hamburguer::before{
+    transform: rotate(135deg);
+}
+
+#nav.ativo #hamburguer::after{
+    top: -7px;
+    transform: rotate(-135deg);
+
+}
+}
+
+
+/* MINHAS HABILIDADES */
+
+h1{
+-webkit-text-stroke: 1px #000; 
+background-image: linear-gradient(to right,#f95178, #f472a2, #ffa7bc); 
+font-family: "Lilita One", sans-serif;
+font-size: 40px;
+width: 400px;
+font-weight: 100;
+font-style: oblique;
+background-clip: text; 
+color: transparent; 
+text-align: center;
+  
+}
+
+#titulo-principal::after {
+    content: "|";
+    animation: piscar 1s infinite;
+}
+
+@keyframes piscar {
+    0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+}
+
+
+section.habilidades{
+    padding: 90px 4%;
+}
+
+.interface_habilidades{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.habilidades_box{
+    width: 200px;
+    padding: 10px;
+    border: 2px solid transparent;
+    margin-top: 10px;
+    transition: 0.2;
+    color: #FF577F;
+}
+
+.habilidades_box:hover{
+    transform: scale(1.05);
+    border-bottom: 3px solid #ff2155;
+}
+
+.habilidades_box i{
+    padding: 10px;
+    font-size: 40px;
+}
+
+.habilidades_box h3{
+    margin: 12px 15px;
+    font-size: 18px;
+    align-items: center;
+    color: #ffd4de;
+}
+
+.paragrafo_habilidades p{
+    margin-top: 15px;
+    font-size: 20px;
+    color: #ffd4de;
+    font-weight: 600;
+    margin: 20px 10px;
+    text-align: justify;
+}
+
+.paragrafo_habilidades h2{
+    font-size: 18px;
+    padding: 5px;
+}
+
+main a.contact {
+    color: #ffd4de;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+a.contact:hover{
+    transform: scaleZ(2px);
+    color: #a7032a;
+}
+
+ button.icone_button{
+    padding: 10px 25px;
+    font-size: 18px;
+    background-color:#FF577F;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 30px;
+}
+
+button.icone_button:hover{
+    box-shadow: 0px 0px 10px #a7032a;
+    transform: scale(1.05)translateZ(4px);
+   
+}
+
+
+/* fOOTER */
+
+.img_rodape{
+    width: 70px;
+    height: 30px;
+    margin-top: 10px;
+
+}
+
+.rodape p{
+    margin-top: 5px;
+}
+
+.rodape p span{
+    color: #ff2155;
+}
+.conteudo_rodape{
+    width: 1650;
+    height: 80px;
+    border-top: 3px solid #ff2155;
+    background: transparent;
+    color: #ffd4de;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+
+@media screen and (max-width: 500){
+    .interface_habilidades{
+        display: flex;
+        flex-direction: column;
+    }
+}
+    
