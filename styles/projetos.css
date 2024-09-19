@@ -1,5 +1,4 @@
 /* Estilização geral */
-
 *{
     margin: 0;
     padding: 0;
@@ -195,9 +194,8 @@ a.contact:hover{
 
 /* Estilização MAIN */
 
-
-
-h1{
+h1
+{
     -webkit-text-stroke: 1px #000; 
     background-image: linear-gradient(to right,#f95178, #f472a2, #ffa7bc); 
     font-family: "Lilita One", sans-serif;
@@ -208,11 +206,9 @@ h1{
     background-clip: text; 
     color: transparent; 
     text-align: center;
-      
+     margin-top: 20px; 
     }
     
-
-
 
 #titulo-principal2::after {
     content: "|";
@@ -230,14 +226,18 @@ h1{
         opacity: 1;
       }
 }
-
-
+ 
+main{
+    height: auto;
+}
 section.projetos{
+    width: 100%;
     padding: 20px 4%;
     height: 570px;
 }
 
-.projeto1_2 {
+.projetos {
+    border-radius: 16px;
     display: flex;
     justify-content: center;
     gap: 100px;
@@ -245,18 +245,18 @@ section.projetos{
     justify-content: space-between;
 }
 
-.projeto1_2 h3{
+.projetos h3{
     font-size: 20px;
     margin-top: 30px;
 }
 
-.projeto1_2 p{
+.projetos p{
     font-size: 18px;
     margin-top: 20px;
     text-align: justify;
 }
 
-.projeto2{
+.projeto{
     margin-top: 10px;
 }
 
@@ -270,12 +270,11 @@ section.projetos{
 
 .img2{
     border: 1px solid #ff2155;
-    padding: 10px;
+    padding: 40px;
     width: 500px;
     height: 280px;
     margin-top:40px ;
 }
-
 
 
 /* fOOTER */
