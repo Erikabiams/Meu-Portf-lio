@@ -271,6 +271,7 @@ h1.segundoh1{
 }
 
 p.apresentacao{
+    text-align: justify;
     color: #ffd4de;
     font-weight: 400;
     font-size: 18px;

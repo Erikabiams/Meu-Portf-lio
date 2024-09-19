@@ -1,4 +1,5 @@
 /* Estilização geral */
+
 *{
     margin: 0;
     padding: 0;
@@ -230,19 +231,34 @@ h1
 main{
     height: auto;
 }
-section.projetos{
+section.projeto{
     width: 100%;
     padding: 20px 4%;
     height: 570px;
 }
 
 .projetos {
+    gap: 20px;
+    padding: 20px;
     border-radius: 16px;
     display: flex;
-    justify-content: center;
-    gap: 100px;
     align-items: center;
     justify-content: space-between;
+
+}
+
+.img1p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    margin: auto;
+}
+
+.img2p{
+    width: 500px;
+    display: flex;
+    border-radius: 16px;
 }
 
 .projetos h3{
@@ -250,30 +266,35 @@ section.projetos{
     margin-top: 30px;
 }
 
-.projetos p{
+.projeto1 p{
+    padding: 20px;
     font-size: 18px;
     margin-top: 20px;
     text-align: justify;
 }
 
-.projeto{
+.projeto2 p {
+    padding: 20px;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: justify;
+
+}
+
+.projetos{
     margin-top: 10px;
 }
 
 .img1{
-    border: 1px solid #ff2155;
-    padding: 10px;
+    padding: -10 40px;
     width: 500px;
     height: 400;
-    margin-top: 20px;
 }
 
 .img2{
-    border: 1px solid #ff2155;
-    padding: 40px;
+    padding: 10px;
     width: 500px;
     height: 280px;
-    margin-top:40px ;
 }
 
 
@@ -295,7 +316,7 @@ section.projetos{
 }
 .conteudo_rodape{
     width: 1650;
-    height: 50px;
+    height: 40px;
     border-top: 3px solid #ff2155;
     background: transparent;
     color: #ffd4de;
@@ -380,7 +401,7 @@ section.projetos{
 }
 
 
-.projeto1_2 {
+.projetos{
     display: flex;
     flex-direction: column;
     gap: 100px;
